@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html xmlns:og=http://ogp.me/ns# xmlns:fb=http://www.facebook.com/2008/fbml dir="ltr" lang="En" >
+<head profile="http://gmpg.org/xfn/11">
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta charset="utf-8">
+	<title>Front-end technologies </title>
+<meta name="description" content="The front-end is everything involved with what the user sees, including design and some languages like HTML and CSS.">
+
+
+<!-- Open Graph data -->
+<meta property="og:title" content="Front-end technologies "/>
+<meta property="og:description" content="The front-end is everything involved with what the user sees, including design and some languages like HTML and CSS."/>
+<meta property="og:type" content="article"/>
+<meta property="og:url" content="https://glossarytech.com/terms/front_end-technologies/page2"/>
+<meta property="og:image" content="http://glossarytech.com/public/site/img/share.jpg"/>
+<meta property="og:site_name" content="Glossarytech"/>
+
+<meta property="article:modified_time" content="2017-05-03 12:50:38"/>
+<meta property="article:section" content="Front-end Technologies "/>
+<meta property="article:tag" content="frontend, front end"/>
+
+
+<link rel="canonical" href="https://glossarytech.com/terms/front_end-technologies/page2" />
+<meta name="mrc__share_title" content="Front-end technologies " />
+<meta name="mrc__share_description" content="The front-end is everything involved with what the user sees, including design and some languages like HTML and CSS."/>
+<link itemprop="thumbnailUrl" href="http://glossarytech.com/public/site/img/share_thumb.png">
+<link itemprop="thumbnail" itemscope itemtype="http://schema.org/ImageObject">		<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+                "@id": "https://glossarytech.com",
+                "name": "Glossarytech.com"
+            }
+        },
+                {
+            "@type": "ListItem",
+            "position": 2,
+            "item": {
+                "@id": "https://glossarytech.com/terms/front_end-technologies",
+                "name": "Front-end Technologies "
+            }
+        }
+                        ]
+    }
+</script>	
+	<!--<meta name="viewport" content="width=device-width">-->
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, target-densityDpi=device-dpi" />
+	<meta name="google-site-verification" content="ZEGxdBIKRriSZaX41RZryfh6vCHWjDJrKpYjglpD3Jw" />
+	<meta name="msvalidate.01" content="9242CC8C6F530906617A9D4749E08DA5" />
+		<meta name="robots" content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large">
+	
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+	<link rel="preconnect" href="https://cdn.jsdelivr.net">
+	<link rel="preload" as="style" href="/app/css/app.css">
+	<link rel="preload" as="script" href="/app/js/script.js">
+	<link rel="shortcut icon" href="/public/site/img/favicon.png">
+
+	<style type="text/css">
+		/*body{width:100%; overflow:hidden;}*/
+		.loader{content:'';	display:block; position:fixed; top:0; right:0; bottom:0; left:0; z-index:9999; background:#fff;}
+		.loader svg { position: absolute; left: 50%; top: 50%; width: 58px; height: 58px; margin: -28px 0 0 -28px; -webkit-animation: spinner 1s infinite linear; animation: spinner 1s infinite linear; }
+		@-webkit-keyframes spinner {
+			0% {-webkit-transform: rotate(0deg); transform: rotate(0deg);}
+			to {-webkit-transform: rotate(360deg); transform: rotate(360deg);}
+		}
+		@keyframes spinner {
+			0% {-webkit-transform: rotate(0deg); transform: rotate(0deg);}
+			to {-webkit-transform: rotate(360deg); transform: rotate(360deg);}
+		}
+	</style>
+
+	
+	<style type="text/css">
+		/* cyrillic-ext */
+		@font-face {
+			font-family: 'Rubik';
+			font-style: normal;
+			font-weight: 400;
+			font-display: swap;
+			src: url(https://fonts.gstatic.com/s/rubik/v11/iJWKBXyIfDnIV7nMrXyi0A.woff2) format('woff2');
+			unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+		}
+		/* cyrillic */
+		@font-face {
+			font-family: 'Rubik';
+			font-style: normal;
+			font-weight: 400;
+			font-display: swap;
+			src: url(https://fonts.gstatic.com/s/rubik/v11/iJWKBXyIfDnIV7nFrXyi0A.woff2) format('woff2');
+			unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+		}
+		/* hebrew */
+		@font-face {
+			font-family: 'Rubik';
+			font-style: normal;
+			font-weight: 400;
+			font-display: swap;
+			src: url(https://fonts.gstatic.com/s/rubik/v11/iJWKBXyIfDnIV7nDrXyi0A.woff2) format('woff2');
+			unicode-range: U+0590-05FF, U+20AA, U+25CC, U+FB1D-FB4F;
+		}
+		/* latin-ext */
+		@font-face {
+			font-family: 'Rubik';
+			font-style: normal;
+			font-weight: 400;
+			font-display: swap;
+			src: url(https://fonts.gstatic.com/s/rubik/v11/iJWKBXyIfDnIV7nPrXyi0A.woff2) format('woff2');
+			unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+		}
+		/* latin */
+		@font-face {
+			font-family: 'Rubik';
+			font-style: normal;
+			font-weight: 400;
+			font-display: swap;
+			src: url(https://fonts.gstatic.com/s/rubik/v11/iJWKBXyIfDnIV7nBrXw.woff2) format('woff2');
+			unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+		}
+		/* cyrillic-ext */
+		@font-face {
+			font-family: 'Rubik';
+			font-style: normal;
+			font-weight: 500;
+			font-display: swap;
+			src: url(https://fonts.gstatic.com/s/rubik/v11/iJWKBXyIfDnIV7nMrXyi0A.woff2) format('woff2');
+			unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+		}
+		/* cyrillic */
+		@font-face {
+			font-family: 'Rubik';
+			font-style: normal;
+			font-weight: 500;
+			font-display: swap;
+			src: url(https://fonts.gstatic.com/s/rubik/v11/iJWKBXyIfDnIV7nFrXyi0A.woff2) format('woff2');
+			unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+		}
+		/* hebrew */
+		@font-face {
+			font-family: 'Rubik';
+			font-style: normal;
+			font-weight: 500;
+			font-display: swap;
+			src: url(https://fonts.gstatic.com/s/rubik/v11/iJWKBXyIfDnIV7nDrXyi0A.woff2) format('woff2');
+			unicode-range: U+0590-05FF, U+20AA, U+25CC, U+FB1D-FB4F;
+		}
+		/* latin-ext */
+		@font-face {
+			font-family: 'Rubik';
+			font-style: normal;
+			font-weight: 500;
+			font-display: swap;
+			src: url(https://fonts.gstatic.com/s/rubik/v11/iJWKBXyIfDnIV7nPrXyi0A.woff2) format('woff2');
+			unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+		}
+		/* latin */
+		@font-face {
+			font-family: 'Rubik';
+			font-style: normal;
+			font-weight: 500;
+			font-display: swap;
+			src: url(https://fonts.gstatic.com/s/rubik/v11/iJWKBXyIfDnIV7nBrXw.woff2) format('woff2');
+			unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+		}
+		/* cyrillic-ext */
+		@font-face {
+			font-family: 'Rubik';
+			font-style: normal;
+			font-weight: 700;
+			font-display: swap;
+			src: url(https://fonts.gstatic.com/s/rubik/v11/iJWKBXyIfDnIV7nMrXyi0A.woff2) format('woff2');
+			unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+		}
+		/* cyrillic */
+		@font-face {
+			font-family: 'Rubik';
+			font-style: normal;
+			font-weight: 700;
+			font-display: swap;
+			src: url(https://fonts.gstatic.com/s/rubik/v11/iJWKBXyIfDnIV7nFrXyi0A.woff2) format('woff2');
+			unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+		}
+		/* hebrew */
+		@font-face {
+			font-family: 'Rubik';
+			font-style: normal;
+			font-weight: 700;
+			font-display: swap;
+			src: url(https://fonts.gstatic.com/s/rubik/v11/iJWKBXyIfDnIV7nDrXyi0A.woff2) format('woff2');
+			unicode-range: U+0590-05FF, U+20AA, U+25CC, U+FB1D-FB4F;
+		}
+		/* latin-ext */
+		@font-face {
+			font-family: 'Rubik';
+			font-style: normal;
+			font-weight: 700;
+			font-display: swap;
+			src: url(https://fonts.gstatic.com/s/rubik/v11/iJWKBXyIfDnIV7nPrXyi0A.woff2) format('woff2');
+			unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+		}
+		/* latin */
+		@font-face {
+			font-family: 'Rubik';
+			font-style: normal;
+			font-weight: 700;
+			font-display: swap;
+			src: url(https://fonts.gstatic.com/s/rubik/v11/iJWKBXyIfDnIV7nBrXw.woff2) format('woff2');
+			unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+		}
+	</style>
+
+	<link rel="stylesheet" href="/app/css/app.css">
+	<link rel="stylesheet" media="print" href="/public/site/css/print.css">
+
+	
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NHM75F9');</script>
+<!-- End Google Tag Manager -->
+
+	<script defer src="https://cdn.jsdelivr.net/combine/npm/jquery@3.5.1,npm/slick-carousel@1.8.1,npm/jquery-validation@1.19.2,npm/tooltipster@4.2.8" crossorigin="anonymous"></script>	
+	<script defer src="/app/js/script.js"></script>
+</head>
+<body >
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NHM75F9"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+	
+	<!--<i class="loader"><svg xmlns="http://www.w3.org/2000/svg" width="58" height="58" viewBox="0 0 58 58"><path fill-rule="evenodd" clip-rule="evenodd" fill="#1077ed" d="M40.174 4.469c-3.41-1.556-7.189-2.446-11.183-2.446-14.913 0-27.001 12.089-27.001 27.001 0 14.913 12.089 27.002 27.001 27.002 14.914 0 27.001-12.089 27.001-27.002 0-.862-.049-1.713-.129-2.555l1.975-.186c.084.896.139 1.803.139 2.721 0 16.02-12.979 29.006-28.989 29.006-16.009.001-28.988-12.986-28.988-29.005s12.979-29.005 28.988-29.005c4.295 0 8.358.959 12.024 2.637l-.838 1.832z"/></svg></i>	-->
+	<div class="mobile_menu">
+		<div class="wrapper">
+							<div class="mobile_menu_user_box">
+											<a class="btn green" data-refferer="terms" href="/auth/li">Sign in</a>
+									</div>
+						<div class="mobile_menu_links">
+				<ul>
+																		<li><a class="js_ga_scanner" href="/scanner">CV Scanner</a></li>
+												<li><a target="_blank" class="js_blog_link" href="https://blog.glossarytech.com">Blog</a></li>
+						<li ><a href="/about">About</a></li>
+						<!--<li ><a href="/conditions ">Terms &amp; conditions</a></li>-->
+						<li ><a href="/contacts">Contacts</a></li>
+														</ul>
+			</div>
+			<div class="social_links_box">
+				<p>Follow us on:</p>
+				<ul>
+					<li><a target="_blank" href="https://www.facebook.com/GlossaryTech/"><i class="icon icon_facebook"><svg><use xlink:href="/public/site/img/icons.svg#icon-facebook"/></svg></i></a></li>
+					<li><a target="_blank" href="https://www.linkedin.com/m/company/16160837/"><i class="icon icon_linkedin"><svg><use xlink:href="/public/site/img/icons.svg#icon-linkedin"/></svg></i></a></li>
+					<li><a target="_blank" href="https://twitter.com/glossarytech"><i class="icon icon_twitter"><svg><use xlink:href="/public/site/img/icons.svg#icon-twitter"/></svg></i></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="page terms">
+		<header class="header_main">
+			<div class="container">
+				<div class="row">
+					<div class="col col-xs-6 col-md-3 col-xl-3">
+												<a class="logo" href="/">
+							<img src="/public/site/img/glossarytech.svg" alt="GlossaryTech_online_dictionary_for_IT_recruiters">
+						</a>
+						<div class="logo print">
+							<img src="/public/site/img/glossarytech_logo.png" alt="GossaryTech_technologies_terms_for_IT_recruiters">
+						</div>
+					</div>
+					<div class="col col-xs-6 col-md-9 col-xl-9 ">
+						<ul class="header_main_links">
+							
+								<li class="item link"><a target="_blank" class="js_blog_link" href="https://blog.glossarytech.com">Blog</a></li>
+																<li class="item link">
+									<a class="btn green" data-refferer="terms" href="/auth/li">Sign in</a>
+								<li class="item link">
+								
+																<li class="item hide_on_mobile">
+									<ul class="header_actions">
+										<li>
+											<a class="tooltip js_print_link" href="#" title="Print">
+												<i class="icon icon_print"><svg><use xlink:href="/public/site/img/icons.svg#icon-print"/></svg></i>Print
+											</a>
+										</li>
+										<li>
+											<a class="tooltip js_download_link" href="/terms/download/5" title="Download">
+												<i class="icon icon_downloadh"><svg><use xlink:href="/public/site/img/icons.svg#icon-download"/></svg></i>Download
+											</a>
+										</li>
+									</ul>
+								</li>
+																<li class="item search_trigger_wrapper">
+									<a title="Search" class="tooltip js_search_trigger" href="#"><i class="icon icon_search"><svg><use xlink:href="/public/site/img/icons.svg#icon-search"/></svg></i></a>
+								</li>
+																	<!--li><a class="js_popup_open js_add_new_term btn_add_new_term tooltip" href="#request_term" title="Add new term"><i class="icon icon_add"></i></a></li-->
+									<li><a class="btn_add_new_term tooltip" href="/sponsor" title="Add new term"><i class="icon icon_add"></i></a></li>
+																												</ul>
+						<div id="show_nav" class="icon_nav"><i></i></div>
+						<div class="js_search_box header_search_box">
+							<form class="search_form inline_form" action="/search/autocomplete">
+								<div class="field">
+									<label for="search-1"><i class="icon icon_search"><svg><use xlink:href="/public/site/img/icons.svg#icon-search"/></svg></i>Search a term</label>
+									<input type="text" name="search-1" value="" id="search-1" required="required" value="">
+									<a class="js_search_hide js_search_link hide" href="#request_term"><i class="icon icon_cross"><svg><use xlink:href="/public/site/img/icons.svg#icon-cross"/></svg></i></a>
+								</div>
+							</form>
+						</div>
+						<div class="url print"><a href="https://glossarytech.com">glossarytech.com</a></div>
+					</div>
+				</div>
+			</div>
+		</header>
+
+				
+				<section class="breadcrumbs_wrapper">
+			<div class="container">
+				<div class="row">
+					<div class="col col-lg-10 col-lg-offset-1 col-xl-8 col-xl-offset-2">
+						<div class="content_wrapper">
+														<ul class="js_breadcrumbs breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList">
+								<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+									<!--<a itemprop="item" href="/"><span itemprop="name"><strong>Glossary</strong>tech</span></a>-->
+									<a class="js_dropdown_trigger" itemprop="item" href="/"><span itemprop="name">Categories</span></a>
+									<meta itemprop="position" content="1" />
+																		<div class="js_dropdown dropdown">
+										<ul>
+											                                                											                                                											                                                											                                                											                                                											                                                											                                                											                                                											                                                											                                                											                                                											                                                											                                                											                                                											                                                											                                                											                                                											                                                											                                                											                                                											                                                																					</ul>
+									</div>
+																		
+								</li>
+																																				<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+											<a class="js_dropdown_trigger" itemprop="item" href="/terms/technologies"><span itemprop="name">Technologies</span></a>
+											<meta itemprop="position" content="2" />
+											<!--
+                                            											<div class="js_dropdown dropdown">
+												<ul>
+																											<li ><a itemprop="item" href="/terms/front_end-technologies">Front-end Technologies </a></li>
+																											<li ><a itemprop="item" href="/terms/back_end-technologies">Back-end Technologies </a></li>
+																											<li ><a itemprop="item" href="/terms/mobile_development">Mobile Development </a></li>
+																											<li ><a itemprop="item" href="/terms/databases">Databases </a></li>
+																									</ul>
+											</div>
+											                                            -->
+										</li>
+											
+																									<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                                    <a itemprop="item" href="/terms/front_end-technologies"><span itemprop="name">Front-end Technologies </span></a>
+									<meta itemprop="position" content="3" />
+								</li>
+															</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>		
+		<section class="content">
+			<div class="container">
+				<div class="row">
+					<div class="col col-lg-10 col-lg-offset-1 col-xl-8 col-xl-offset-2">
+						<div class="content_wrapper">
+
+						<div id="subscription_popup" class="js_subscription_popup subscription_banner">
+<div class="form" style="background-color: #f3f8fe; border-radius: 10px; padding: 20px;">
+    <div style="float: left; width: 80%">
+    <h4 style="margin-bottom:3px;">Hire software engineers — relocate or remote</h4>
+    <div>Relocate.me supports GlossaryTech to keep it free for the community</div>
+    </div>
+    <div style="float:right; width:20%;">
+        <a rel="sponsored" class="btn" href="https://relocate.me/employer" target="_blank">Post jobs</a>
+    </div>
+    <div class="clear"></div>
+</div>
+<div class="form_message hidden-xs"></div>
+						</div>
+
+							<table>
+								<tbody>
+									<tr class="heading">
+                                        <td colspan="2"><h1>Front-end Technologies </h1></td>
+									</tr>
+																																																		<!--class="scroll_item"-->
+										<tr data-term="594"> 
+											<td><p><a href="/terms/front_end-technologies/browserify">Browserify</a></p></td>
+											<td>
+												<p>A&nbsp;development tool that allows to write <a href="/terms/javascript/nodejs" data-url="/terms/get_hint" data-hint="595">Node.js</a>-style modules that compile for use in the browser.</p>
+																								<a class="js_add_comment add_comment" data-id="594" href="#"><span class="tooltip"><i class="icon icon_comment"><svg><use xlink:href="/public/site/img/icons.svg#icon-comment"/></svg></i></span></a>
+											</td>
+										</tr>																																									<!--class="scroll_item"-->
+										<tr data-term="1468"> 
+											<td><p><a href="/terms/front_end-technologies/brunch">Brunch</a></p></td>
+											<td>
+												<p>A build tool that has large capabilities which are provided out of the box performance. It builds, lints, compiles, concatenates and shrinks <a href="/terms/front_end-technologies/html" data-url="/terms/get_hint" data-hint="46">HTML5</a>&nbsp;app in an ultra-simple way.</p>
+																								<a class="js_add_comment add_comment" data-id="1468" href="#"><span class="tooltip"><i class="icon icon_comment"><svg><use xlink:href="/public/site/img/icons.svg#icon-comment"/></svg></i></span></a>
+											</td>
+										</tr>																																									<!--class="scroll_item"-->
+										<tr data-term="2906"> 
+											<td><p><a href="/terms/front_end-technologies/bulma">Bulma </a></p></td>
+											<td>
+												<p>Bulma is a user-friendly open-source&nbsp;<a href="/terms/front_end-technologies/css" data-url="/terms/get_hint" data-hint="548">CSS</a> framework that offers pre-designed styles and components for building responsive websites with ease. It uses <a href="/terms/front_end-technologies/flexbox" data-url="/terms/get_hint" data-hint="1580">Flexbox</a>&nbsp;for flexible layouts and is popular among developers for its simplicity and quick styling capabilities.</p>
+																								<a class="js_add_comment add_comment" data-id="2906" href="#"><span class="tooltip"><i class="icon icon_comment"><svg><use xlink:href="/public/site/img/icons.svg#icon-comment"/></svg></i></span></a>
+											</td>
+										</tr>																																									<!--class="scroll_item"-->
+										<tr data-term="606"> 
+											<td><p><a href="/terms/front_end-technologies/canvasjs">CanvasJS</a></p></td>
+											<td>
+												<p><a href="/terms/front_end-technologies/html" data-url="/terms/get_hint" data-hint="46">HTML5</a>&nbsp;and <a href="/terms/front_end-technologies/javascript" data-url="/terms/get_hint" data-hint="549">JavaScript</a> charting library. It runs across devices including iPhone, iPad, <a href="/terms/android/android" data-url="/terms/get_hint" data-hint="858">Android</a>, Windows Phone, desktops, etc. CanvasJS currently supports 14 different types of Charts.</p>
+																								<a class="js_add_comment add_comment" data-id="606" href="#"><span class="tooltip"><i class="icon icon_comment"><svg><use xlink:href="/public/site/img/icons.svg#icon-comment"/></svg></i></span></a>
+											</td>
+										</tr>																																									<!--class="scroll_item"-->
+										<tr data-term="1640"> 
+											<td><p><a href="/terms/front_end-technologies/chartjs">Chart.js</a></p></td>
+											<td>
+												<p>A library of <a href="/terms/front_end-technologies/html" data-url="/terms/get_hint" data-hint="46">HTML5</a> interactive and animated charts that can be added to a website.&nbsp;Chart.js can be used by both designers and developers. It allows mixing different types of charts to better display datasets, plot complex datasets based on different conditions and add different colours to one chart.</p>
+																								<a class="js_add_comment add_comment" data-id="1640" href="#"><span class="tooltip"><i class="icon icon_comment"><svg><use xlink:href="/public/site/img/icons.svg#icon-comment"/></svg></i></span></a>
+											</td>
+										</tr>																																									<!--class="scroll_item"-->
+										<tr data-term="52"> 
+											<td><p><a href="/terms/front_end-technologies/clojurescript">ClojureScript</a></p></td>
+											<td>
+												<p><span style="color:rgb(51, 51, 51)"><a href="/terms/functional-programming-fp/clojure" data-url="/terms/get_hint" data-hint="956">Clojure</a></span>&nbsp;programming language that compiles to <a href="/terms/front_end-technologies/javascript" data-url="/terms/get_hint" data-hint="549">JavaScript</a>. It is a well-designed, stable functional and dynamic language with a rich set of immutable, persistent data structures. The primary goal is to make it easier to build complex and robust systems while keeping them simple</p>
+																								<a class="js_add_comment add_comment" data-id="52" href="#"><span class="tooltip"><i class="icon icon_comment"><svg><use xlink:href="/public/site/img/icons.svg#icon-comment"/></svg></i></span></a>
+											</td>
+										</tr>																																									<!--class="scroll_item"-->
+										<tr data-term="845"> 
+											<td><p><a href="/terms/front_end-technologies/compass">Compass</a></p></td>
+											<td>
+												<p><a href="/terms/front_end-technologies/css" data-url="/terms/get_hint" data-hint="548" target="_blank">CSS</a>&nbsp;authoring framework that makes your stylesheets and markup easier to build and maintain. With Compass, you write your stylesheets in <a href="/terms/front_end-technologies/sass" data-url="/terms/get_hint" data-hint="477">Sass</a> instead of plain CSS.</p>
+																								<a class="js_add_comment add_comment" data-id="845" href="#"><span class="tooltip"><i class="icon icon_comment"><svg><use xlink:href="/public/site/img/icons.svg#icon-comment"/></svg></i></span></a>
+											</td>
+										</tr>																																									<!--class="scroll_item"-->
+										<tr data-term="512"> 
+											<td><p><a href="/terms/front_end-technologies/corejs">Core.js</a></p></td>
+											<td>
+												<p>A simple, lightweight, base layer to the client-side <a href="/terms/front_end-technologies/javascript" data-url="/terms/get_hint" data-hint="549">JavaScript</a>&nbsp;app. Allows to create apps that have multiple working extensions that all interact with each other without ever actually knowing about one another.</p>
+																								<a class="js_add_comment add_comment" data-id="512" href="#"><span class="tooltip"><i class="icon icon_comment"><svg><use xlink:href="/public/site/img/icons.svg#icon-comment"/></svg></i></span></a>
+											</td>
+										</tr>																																									<!--class="scroll_item"-->
+										<tr data-term="548"> 
+											<td><p><a href="/terms/front_end-technologies/css">CSS</a></p></td>
+											<td>
+												<p>A stylesheet language that is used for presentation and formatting content on the web-pages, including&nbsp;font, size, color, spacing, border and location of <a href="/terms/front_end-technologies/html" data-url="/terms/get_hint" data-hint="46">HTML</a>&nbsp;information.&nbsp;</p>
+																								<a class="js_add_comment add_comment" data-id="548" href="#"><span class="tooltip"><i class="icon icon_comment"><svg><use xlink:href="/public/site/img/icons.svg#icon-comment"/></svg></i></span></a>
+											</td>
+										</tr>																																									<!--class="scroll_item"-->
+										<tr data-term="2326"> 
+											<td><p><a href="/terms/front_end-technologies/css-animations">CSS animations</a></p></td>
+											<td>
+												<p>CSS animations make it possible to animate transitions from one <a href="/terms/front_end-technologies/css" data-url="/terms/get_hint" data-hint="548">CSS</a> style configuration to another.&nbsp;</p>
+																								<a class="js_add_comment add_comment" data-id="2326" href="#"><span class="tooltip"><i class="icon icon_comment"><svg><use xlink:href="/public/site/img/icons.svg#icon-comment"/></svg></i></span></a>
+											</td>
+										</tr>																																									<!--class="scroll_item"-->
+										<tr data-term="165"> 
+											<td><p><a href="/terms/front_end-technologies/css-modules">CSS Modules</a></p></td>
+											<td>
+												<p><a href="/terms/front_end-technologies/css" data-url="/terms/get_hint" data-hint="548">CSS</a>&nbsp;file in which all class names and animation names are scoped locally by default. The classes are dynamically generated, unique, and mapped to the correct styles.</p>
+																								<a class="js_add_comment add_comment" data-id="165" href="#"><span class="tooltip"><i class="icon icon_comment"><svg><use xlink:href="/public/site/img/icons.svg#icon-comment"/></svg></i></span></a>
+											</td>
+										</tr>																																									<!--class="scroll_item"-->
+										<tr data-term="906"> 
+											<td><p><a href="/terms/front_end-technologies/css_preprocessor">CSS Preprocessor</a></p></td>
+											<td>
+												<p>A program that generates <a href="/terms/front_end-technologies/css" data-url="/terms/get_hint" data-hint="548">CSS</a>&nbsp;from the preprocessor&#39;s own unique syntax. Helps write maintainable, future-proof code and seriously reduces the amount of CSS you have to write.</p>
+																								<a class="js_add_comment add_comment" data-id="906" href="#"><span class="tooltip"><i class="icon icon_comment"><svg><use xlink:href="/public/site/img/icons.svg#icon-comment"/></svg></i></span></a>
+											</td>
+										</tr>																																									<!--class="scroll_item"-->
+										<tr data-term="840"> 
+											<td><p><a href="/terms/front_end-technologies/css-related">CSS-related</a></p></td>
+											<td>
+												<p><span style="color:rgb(51, 51, 51)">CSS2, CSS3,&nbsp;</span><a href="/terms/front_end-technologies/bootstrap" data-url="/terms/get_hint" data-hint="40">Bootstrap</a><span style="color:rgb(51, 51, 51)">, <a href="/terms/front_end-technologies/compass" data-url="/terms/get_hint" data-hint="845" target="_blank">Compass</a>,&nbsp;<a href="/terms/front_end-technologies/less" data-url="/terms/get_hint" data-hint="540">LESS</a>,&nbsp;</span><a href="/terms/front_end-technologies/sass" data-url="/terms/get_hint" data-hint="477">Sass</a><span style="color:rgb(51, 51, 51)">, <a href="/terms/front_end-technologies/yaml" data-url="/terms/get_hint" data-hint="846" target="_blank">YAML</a>, <a href="/terms/front_end-technologies/foundation" data-url="/terms/get_hint" data-hint="843" target="_blank">Zurb</a>.</span></p>
+																								<a class="js_add_comment add_comment" data-id="840" href="#"><span class="tooltip"><i class="icon icon_comment"><svg><use xlink:href="/public/site/img/icons.svg#icon-comment"/></svg></i></span></a>
+											</td>
+										</tr>																																									<!--class="scroll_item"-->
+										<tr data-term="2603"> 
+											<td><p><a href="/terms/front_end-technologies/cv-compiler">CV Compiler </a></p></td>
+											<td>
+												<p>A tech resume reviewer aimed at&nbsp;making Front End resumes more competitive. The tool analyzes the resume and gives&nbsp;immediate improvement suggestions.</p>
+																								<a class="js_add_comment add_comment" data-id="2603" href="#"><span class="tooltip"><i class="icon icon_comment"><svg><use xlink:href="/public/site/img/icons.svg#icon-comment"/></svg></i></span></a>
+											</td>
+										</tr>																																									<!--class="scroll_item"-->
+										<tr data-term="1718"> 
+											<td><p><a href="/terms/front_end-technologies/cypress">Cypress </a></p></td>
+											<td>
+												<p>A developer-focused tool that helps developers write tests for the web. It can test anything that runs in a browser.</p>
+																								<a class="js_add_comment add_comment" data-id="1718" href="#"><span class="tooltip"><i class="icon icon_comment"><svg><use xlink:href="/public/site/img/icons.svg#icon-comment"/></svg></i></span></a>
+											</td>
+										</tr>																																									<!--class="scroll_item"-->
+										<tr data-term="923"> 
+											<td><p><a href="/terms/front_end-technologies/d3js">D3.js</a></p></td>
+											<td>
+												<p>Vector graphics library for <a href="/terms/front_end-technologies/javascript" data-url="/terms/get_hint" data-hint="549">JavaScript</a>, featuring animation, interactivity, and <a href="/terms/front_end-technologies/dom" data-url="/terms/get_hint" data-hint="888">DOM</a>&nbsp;manipulation. D3 is Data-Driven Documents, and it binds data to the <a href="/terms/web_design/svg" data-url="/terms/get_hint" data-hint="1225">SVG</a>&nbsp;to create animated and interactive visualizations.</p>
+																								<a class="js_add_comment add_comment" data-id="923" href="#"><span class="tooltip"><i class="icon icon_comment"><svg><use xlink:href="/public/site/img/icons.svg#icon-comment"/></svg></i></span></a>
+											</td>
+										</tr>																																									<!--class="scroll_item"-->
+										<tr data-term="1369"> 
+											<td><p><a href="/terms/front_end-technologies/dhtml">DHTML</a></p></td>
+											<td>
+												<p>A set of technologies used to make webpages more interactive. DHTML is basically using &nbsp;<a href="/terms/front_end-technologies/javascript" data-url="/terms/get_hint" data-hint="549">JavaScript</a>&nbsp;and style sheets in an <a href="/terms/front_end-technologies/html" data-url="/terms/get_hint" data-hint="46">HTML</a>&nbsp;page and creates a page with HTML,&nbsp;<a href="/terms/front_end-technologies/css" data-url="/terms/get_hint" data-hint="548">CSS</a>,&nbsp;<a href="/terms/front_end-technologies/dom" data-url="/terms/get_hint" data-hint="888">DOM</a> and Scripts. Requires processing from browser which changes its look and feel.</p>
+																								<a class="js_add_comment add_comment" data-id="1369" href="#"><span class="tooltip"><i class="icon icon_comment"><svg><use xlink:href="/public/site/img/icons.svg#icon-comment"/></svg></i></span></a>
+											</td>
+										</tr>																																									<!--class="scroll_item"-->
+										<tr data-term="622"> 
+											<td><p><a href="/terms/front_end-technologies/dojo">Dojo</a></p></td>
+											<td>
+												<p>A <a href="/terms/front_end-technologies/javascript" data-url="/terms/get_hint" data-hint="549">JavaScript</a>&nbsp;toolkit that provides everything needed to build a web app (language utilities, <a href="/terms/web_design/ui" data-url="/terms/get_hint" data-hint="255">UI</a> components, etc.).</p>
+																								<a class="js_add_comment add_comment" data-id="622" href="#"><span class="tooltip"><i class="icon icon_comment"><svg><use xlink:href="/public/site/img/icons.svg#icon-comment"/></svg></i></span></a>
+											</td>
+										</tr>																																									<!--class="scroll_item"-->
+										<tr data-term="888"> 
+											<td><p><a href="/terms/front_end-technologies/dom">DOM</a></p></td>
+											<td>
+												<p>An application programming interface (<a href="/terms/software_architecture/api" data-url="/terms/get_hint" data-hint="206">API</a>) for <a href="/terms/front_end-technologies/html" data-url="/terms/get_hint" data-hint="46">HTML</a>&nbsp;and&nbsp;<a href="/terms/software_architecture/xml" data-url="/terms/get_hint" data-hint="498">XML</a> documents. It defines the logical structure of documents and the way a document is accessed and manipulated. With the Document Object Model, developers can create and build documents, navigate their structure, and add, modify, or delete elements and content.</p>
+																								<a class="js_add_comment add_comment" data-id="888" href="#"><span class="tooltip"><i class="icon icon_comment"><svg><use xlink:href="/public/site/img/icons.svg#icon-comment"/></svg></i></span></a>
+											</td>
+										</tr>																																									<!--class="scroll_item"-->
+										<tr data-term="1000"> 
+											<td><p><a href="/terms/front_end-technologies/dustjs">Dust.js</a></p></td>
+											<td>
+												<p>A <a href="/terms/front_end-technologies/javascript" data-url="/terms/get_hint" data-hint="549">JavaScript</a>&nbsp;templating engine designed to provide a clean separation between presentation and logic without sacrificing ease of use. It is particularly well-suited for asynchronous and streaming applications.</p>
+																								<a class="js_add_comment add_comment" data-id="1000" href="#"><span class="tooltip"><i class="icon icon_comment"><svg><use xlink:href="/public/site/img/icons.svg#icon-comment"/></svg></i></span></a>
+											</td>
+										</tr>																																									<!--class="scroll_item"-->
+										<tr data-term="341"> 
+											<td><p><a href="/terms/front_end-technologies/ecmascript">ECMAScript</a></p></td>
+											<td>
+												<p>ECMAScript (or ES) is a client-side scripting language specification that is the basis of several programming languages including <a href="/terms/front_end-technologies/javascript" data-url="/terms/get_hint" data-hint="549">JavaScript</a>, <a href="/terms/other-programming_languages/actionscript" data-url="/terms/get_hint" data-hint="1153">ActionScript</a>, and JScript. It specifies the core features that a scripting language should provide and how those features should be implemented.</p>
+																								<a class="js_add_comment add_comment" data-id="341" href="#"><span class="tooltip"><i class="icon icon_comment"><svg><use xlink:href="/public/site/img/icons.svg#icon-comment"/></svg></i></span></a>
+											</td>
+										</tr>																																									<!--class="scroll_item"-->
+										<tr data-term="406"> 
+											<td><p><a href="/terms/front_end-technologies/electron">Electron </a></p></td>
+											<td>
+												<p>An open-source framework for creating native applications with web-technologies like <a href="/terms/front_end-technologies/javascript" data-url="/terms/get_hint" data-hint="549" target="_blank">JavaScript</a>,&nbsp;<a href="/terms/front_end-technologies/css" data-url="/terms/get_hint" data-hint="548" target="_blank">CSS</a>&nbsp;&amp;&nbsp;<a href="/terms/front_end-technologies/html" data-url="/terms/get_hint" data-hint="46" target="_blank">HTML</a>. It is based on <a href="/terms/javascript/nodejs" data-url="/terms/get_hint" data-hint="595">Node.js</a> and Chromium and is used by the <a href="/terms/front_end-technologies/atom" data-url="/terms/get_hint" data-hint="1493">Atom</a>&nbsp;editor and many other apps. Focused on desktop cross-platform development.</p>
+																								<a class="js_add_comment add_comment" data-id="406" href="#"><span class="tooltip"><i class="icon icon_comment"><svg><use xlink:href="/public/site/img/icons.svg#icon-comment"/></svg></i></span></a>
+											</td>
+										</tr>																																									<!--class="scroll_item"-->
+										<tr data-term="922"> 
+											<td><p><a href="/terms/front_end-technologies/emberjs">Ember.js</a></p></td>
+											<td>
+												<p>A client-side <a href="/terms/front_end-technologies/javascript" data-url="/terms/get_hint" data-hint="549">JavaScript</a>&nbsp;framework designed for building single page web-applications. Follows the <a href="/terms/software_architecture/mvc" data-url="/terms/get_hint" data-hint="201">MVC</a>&nbsp;paradigm that helps organize front-end code in a way that supports extensibility, modularity, and readability.</p>
+																								<a class="js_add_comment add_comment" data-id="922" href="#"><span class="tooltip"><i class="icon icon_comment"><svg><use xlink:href="/public/site/img/icons.svg#icon-comment"/></svg></i></span></a>
+											</td>
+										</tr>																																									<!--class="scroll_item"-->
+										<tr data-term="3044"> 
+											<td><p><a href="/terms/front_end-technologies/esbuild">esbuild </a></p></td>
+											<td>
+												<p>esbuild is an open-source <a href="/terms/front_end-technologies/javascript" data-url="/terms/get_hint" data-hint="549">JavaScript</a> bundler and minifier that&#39;s known for its speed and efficiency.</p>
+																								<a class="js_add_comment add_comment" data-id="3044" href="#"><span class="tooltip"><i class="icon icon_comment"><svg><use xlink:href="/public/site/img/icons.svg#icon-comment"/></svg></i></span></a>
+											</td>
+										</tr>																																									<!--class="scroll_item"-->
+										<tr data-term="1477"> 
+											<td><p><a href="/terms/front_end-technologies/eslint">ESLint</a></p></td>
+											<td>
+												<p>An open source <a href="/terms/front_end-technologies/javascript" data-url="/terms/get_hint" data-hint="549">JavaScript</a> linting utility that enables developers to discover problems with their JavaScript code without executing it.&nbsp;<span style="color:rgb(51, 51, 51)">ESLint is written using <a href="/terms/javascript/nodejs" data-url="/terms/get_hint" data-hint="595">Node.js</a> to provide a fast runtime environment.</span></p>
+																								<a class="js_add_comment add_comment" data-id="1477" href="#"><span class="tooltip"><i class="icon icon_comment"><svg><use xlink:href="/public/site/img/icons.svg#icon-comment"/></svg></i></span></a>
+											</td>
+										</tr>																																				</tbody>
+							</table>
+							
+							<div class="content_footer">
+								<div class="hidden-xs visible-md">
+									<a class="js_popup_open js_add_new_term link" href="#add_term"><i class="icon icon_add"><svg><use xlink:href="/public/site/img/icons.svg#icon-add"/></svg></i>Add a new term</a>
+								</div>
+								<div class="hidden-md">
+									<a class="js_popup_open js_add_new_term btn transparent" href="#add_term"><i class="icon icon_add"><svg><use xlink:href="/public/site/img/icons.svg#icon-add"/></svg></i>Add a new term</a>
+									<a class="js_download_link btn transparent_black" href="/terms/download/5"><i class="icon icon_download"><svg><use xlink:href="/public/site/img/icons.svg#icon-download"/></svg></i>Download</a>
+								</div>
+								<!--
+								<div class="social">
+									<span class='st_facebook_vcount' displayText='Facebook'><i class="icon icon_facebook"><svg><use xlink:href="/public/site/img/icons.svg#icon-facebook"/></svg></i></span>
+									<span class='st_linkedin_vcount' displayText='LinkedIn'><i class="icon icon_linkedin"><svg><use xlink:href="/public/site/img/icons.svg#icon-linkedin"/></svg></i></span>
+									<span class='st_twitter_vcount' displayText='Tweet'><i class="icon icon_twitter"><svg><use xlink:href="/public/site/img/icons.svg#icon-twitter"/></svg></i></span>
+									<span class='st_googleplus_vcount' displayText='Google +'><i class="icon icon_google"><svg><use xlink:href="/public/site/img/icons.svg#icon-google"/></svg></i></span>
+								</div>
+								-->
+							</div>
+				
+														<div class="pager">
+															<a href="/terms/front_end-technologies/page1" class="link prev"><i class="icon icon_arrow"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow"></use></svg></i></a>
+															<ul class="pages">&nbsp;<a href="/terms/front_end-technologies/page1">&lt;</a><li><a href="/terms/front_end-technologies/">1</a></li><li class="active"><a>2</a></li><li><a href="/terms/front_end-technologies/page3">3</a></li><li><a href="/terms/front_end-technologies/page4">4</a></li>&nbsp;<a href="/terms/front_end-technologies/page3">&gt;</a>&nbsp;<li>...</li><li><li><a href="/terms/front_end-technologies/page7">7</a></li></ul>															<a href="/terms/front_end-technologies/page3" class="link next"><i class="icon icon_arrow"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow"></use></svg></i></a>
+								
+							</div>
+													</div>
+					</div>
+				</div>
+			</div>
+		</section>
+						
+					<footer class="footer_main">
+				<div class="container">
+					<div class="row">
+						<div class="col col-md-8 col-lg-6 col-xl-5">
+							<div class="hidden-xs visible-md">
+								<p><a target="_blank" href="https://relocate.me"><img src="/public/site/img/logo-relocateme-blue.svg" alt="Relocateme.eu" style="margin-bottom:10px; width: 124px; margin-right: 15px; vertical-align: middle;"></a></p>
+							</div>
+						</div>
+						<div class="col col-md-4 col-lg-3 col-xl-2 col-xl-offset-1">
+							<ul class="footer_links">
+								<li ><a class="js_ga_scanner" href="/scanner">CV Scanner</a></li>
+								<li ><a href="/about">About</a></li>
+								<li><a target="_blank" class="js_blog_link" href="https://blog.glossarytech.com">Blog</a></li>
+								<li ><a href="/sessions">Bull Sessions</a></li>
+								<li ><a href="/conditions ">Terms &amp; conditions</a></li>
+								<li ><a class="js_ga_scanner" href="/plugin">GlossaryTech plugin</a></li>
+								<li ><a href="/contacts">Contacts</a></li>
+							</ul>
+						</div>
+						<div class="col col-xl-2 col-lg-3 col-xl-offset-1">
+							<div class="row">
+								<div class="col col-md-8 col-lg-12">
+									<div class="plugin_box">
+										<p>Chrome Extension</p>
+										<p><a target="_blank" href="https://chrome.google.com/webstore/detail/glossarytech-learn-tech-w/lkfaknngnekohfmljebdikgefjfhkgkp" class="btn transparent"><i class="icon icon_f_chrome"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-f-chrome"></use></svg></i>Install Extension</a></p>
+									</div>
+								</div>
+								<div class="col col-md-4 col-lg-12">
+									<div class="social_links_box">
+										<p>Follow us on:</p>
+										<ul>
+											<li><a target="_blank" href="https://www.facebook.com/GlossaryTech/"><i class="icon icon_facebook"><svg><use xlink:href="/public/site/img/icons.svg#icon-facebook"/></svg></i></a></li>
+											<li><a target="_blank" href="https://www.linkedin.com/m/company/16160837/"><i class="icon icon_linkedin"><svg><use xlink:href="/public/site/img/icons.svg#icon-linkedin"/></svg></i></a></li>
+											<li><a target="_blank" href="https://twitter.com/glossarytech"><i class="icon icon_twitter"><svg><use xlink:href="/public/site/img/icons.svg#icon-twitter"/></svg></i></a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="hidden-md">
+								<p><a target="_blank" href="https://relocate.me"><img src="/public/site/img/logo-relocateme-blue.svg" alt="Relocateme.eu" style="margin-bottom:10px; width: 124px; margin-right: 15px; vertical-align: middle;"></a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+			<section class="bottombar">
+				<div class="container">
+					<div class="row">
+						<div class="col col-md-6 col-xl-5 col-xl-offset-1">
+							<p class="copyright">© Copyright 2025 Relocateme. All Rights Reserved</p>
+						</div>
+						<div class="col col-md-6 col-xl-5">
+							<p>Development by <a target="_blank" rel="nofollow" href="http://synergize.digital">Synergize.digital</a></p>
+													</div>
+					</div>
+				</div>
+			</section>
+			
+	</div>
+
+	<div id="subscription_popup" class="js_subscription_popup subscription_popup">
+		<div class="form">
+			<!--<h4>Sign up to receive our weekly <br>updates, including new terms</h4>-->
+			<h4>Sign up for updates <br>straight to your inbox</h4>
+			
+			<div class="subscription_box">
+				<form class="subscription_form inline_form js_inline_form js_form" action="/forms/subscribe/popup">
+					<div class="field">
+						<label for="subscription-2"><i class="icon icon_mail"><svg><use xlink:href="/public/site/img/icons.svg#icon-mail"/></svg></i>Your work email</label>
+						<input type="email" name="mail" id="subscription-2" required="required" data-rule-checkEmail="true" autocomplete="off">
+					</div>
+					<div class="field">
+						<input type="checkbox" name="agreement" id="f-agreement" value="" required="required">
+						<label for="f-agreement" style="font-size:16px; padding: 0 0 0 35px; color: #727983; pointer-events: all;">I agree to these <a target="_blank" href="/conditions">Terms</a> & <a target="_blank" href="/conditions#policy">Privacy Policy</a></label>
+					</div>
+					<div class="button">
+						<a class="btn js_subscription_link submit disabled" href="#">Subscribe</a>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="form_message hidden-xs"></div>
+		<a class="close js_subscription_popup_close" href="#"><i class="icon icon_cross"><svg><use xlink:href="/public/site/img/icons.svg#icon-cross"></use></svg></i></a>
+	</div>
+
+	<div id="cookie_popup" class="js_cookie_popup cookie_popup">
+		<div class="text">
+			<h4>This website uses cookies</h4>
+			<p>We use cookies to continuously improve your experience on our site. <a href="/conditions#policy">More info.</a></p>
+			<p><a href="#" class="btn js_cookie_popup_close">Got it!</a></p>
+		</div>
+		<div class="form_message hidden-xs"></div>
+		<a class="close js_cookie_popup_close" href="#"><i class="icon icon_cross"><svg><use xlink:href="/public/site/img/icons.svg#icon-cross"></use></svg></i></a>
+	</div>
+	
+	<div id="popup" class="js_popup popup">
+		<div class="popup_header">
+			<div class="logo"><img src="/public/site/img/glossarytech.svg" alt=""></div>
+							<a class="close js_popup_close" href="#"><i class="icon icon_cross"><svg><use xlink:href="/public/site/img/icons.svg#icon-cross"></use></svg></i></a>
+					</div>
+		<div class="popup_content">
+			<div class="popup_content_wrapper">
+				<div class="container">
+					<div id="add_term" class="part">
+						<div class="row">
+							<div class="col col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4">
+								<div class="wrapper">
+									<div class="form">
+										<h2>Add a new term</h2>
+										<form class="js_add_term_form js_form" action="/forms/add_term">
+											<div class="form_row js_inside_labels inside_labels">
+												<div class="field">
+													<label for="f1_3">Term</label>
+													<input type="text" name="name" id="f1_3" required="required" data-rule-latin="true" value="" minlength="3">
+												</div>
+											</div>
+											<div class="form_row js_inside_labels inside_labels">
+												<div class="field">
+													<label for="f1_6">Term description</label>
+													<textarea id="f1_6" name="text" required="required" data-rule-latin="true" minlength="3"></textarea>
+												</div>
+											</div>
+																						<div class="form_row js_inside_labels inside_labels">
+												<div class="field">
+													<label for="category-selectbox">Category <span>(optional)</span></label>
+													<select id="category-selectbox" name="pid" data-text=" " class="js_dependent empty">
+																													<option value="64">Game Development</option>
+																													<option value="51">Quality Assurance (QA) </option>
+																													<option value="52">Software Infrastructure (DevOps) </option>
+																													<option value="65">Web Design</option>
+																													<option value="1">Technologies</option>
+																													<option value="70">Product Management</option>
+																													<option value="72">Project Management</option>
+																													<option value="73">Leadership</option>
+																													<option value="2">Development Methodologies </option>
+																													<option value="3">Software Architecture </option>
+																													<option value="49">Fundamental Programming Concepts </option>
+																													<option value="50">Programming Paradigms </option>
+																													<option value="67">Data Science</option>
+																													<option value="75">Artificial Intelligence (AI)</option>
+																													<option value="47">Tools </option>
+																													<option value="57">Roles in Software Development </option>
+																													<option value="66">Embedded</option>
+																													<option value="61">Cloud Computing </option>
+																													<option value="71">Cyber Security </option>
+																													<option value="74">Blockchain</option>
+																													<option value="48">General Terms </option>
+															
+													</select>
+												</div>
+											</div>
+											<div class="form_row hidden js_inside_labels inside_labels">
+												<div class="field ">
+													<label>Subcategory <span>(optional)</span></label>
+													<!--
+														data-parent="#category-selectbox" - id селектбокса с категориями
+														data-id="1" - value выбранного option в селектбоксе с категориями
+													-->
+																																																																																																																																																						<select disabled="disabled" class="hidden" name="pid" data-text=" " data-parent="#category-selectbox" data-id="1">
+																																	<option value="5">Front-end Technologies </option>
+																																	<option value="6">Back-end Technologies </option>
+																																	<option value="38">Mobile Development </option>
+																																	<option value="9">Databases </option>
+																	
+															</select>
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																							</div>
+											</div>
+																						<div class="form_row js_inside_labels inside_labels">
+												<div class="field">
+													<label for="f1_1">Your name</label>
+													<input type="text" name="author" id="f1_1" required="required" data-rule-latin="true" value="">
+												</div>
+											</div>
+											<div class="form_row js_inside_labels inside_labels">
+												<div class="field">
+													<label for="f1_2">Email address</label>
+													<input type="email" name="mail" id="f1_2" required="required" data-rule-latin="true" data-rule-checkEmail="true" autocomplete="off" value="">
+												</div>
+											</div>
+											<div class="form_row">
+												<div class="field">
+													<input type="checkbox" name="agreement" id="f1_7" value="" required="required">
+													<label for="f1_7" style="font-size:14px; padding: 0 0 0 35px; color: #727983;">I agree to these <a target="_blank" href="/conditions">Terms</a> & <a target="_blank" href="/conditions#policy">Privacy Policy</a></label>
+												</div>
+											</div>
+											<div class="form_row">
+												<div class="field centred">
+													<a class="btn submit disabled" href="#">Send</a>
+												</div>
+											</div>
+										</form>
+									</div>
+									<div class="form_message"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="add_comment" class="part">
+						<div class="row">
+							<div class="col col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4">
+								<div class="wrapper">
+									<div class="form">
+										<h2>Add comment</h2>
+										<form class="js_add_comment_form js_form" action="/forms/add_comment">
+											<!-- Сюда с помощью javascript подставляется id термина для которого пишется комментарий -->
+											<input class="js_term_id" type="hidden" name="term" value="">
+											<div class="form_row js_inside_labels inside_labels">
+												<div class="field">
+													<label for="f2_3">Your comment</label>
+													<textarea id="f2_3" name="text" required="required" minlength="5"></textarea>
+												</div>
+											</div>
+											<div class="form_row js_inside_labels inside_labels">
+												<div class="field">
+													<label for="f2_1">Your name</label>
+													<input type="text" name="author" id="f2_1" required="required" value="">
+												</div>
+											</div>
+											<div class="form_row js_inside_labels inside_labels">
+												<div class="field">
+													<label for="f2_2">Your email</label>
+													<input type="email" name="mail" id="f2_2" required="required" data-rule-checkEmail="true" autocomplete="off" value="">
+												</div>
+											</div>	
+											<div class="form_row">
+												<div class="field">
+													<input type="checkbox" name="agreement" id="f2_4" value="" required="required">
+													<label for="f2_4" style="font-size:14px; padding: 0 0 0 35px; color: #727983; ">I agree to these <a target="_blank" href="/conditions">Terms</a> & <a target="_blank" href="/conditions#policy">Privacy Policy</a></label>
+												</div>
+											</div>										
+											<div class="form_row">
+												<div class="field centred">
+													<a class="btn submit disabled" href="#">Send</a>
+													<a class="btn link js_popup_close js_tooltip_close" href="#">Cancel</a>
+												</div>
+											</div>
+										</form>
+									</div>
+									<div class="form_message"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="request_term" class="part">
+						<div class="row">
+							<div class="col col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4">
+								<div class="wrapper">
+									<div class="form">
+										<h2>Request to add a term</h2>
+										<p>Leave your email and we'll notify you<br> as soon as the term is added.</p>
+										<form class="js_add_term_form js_form" action="/forms/request">	
+											<div class="form_row inside_labels js_inside_labels">
+												<div class="field">
+													<label for="f3_1">Term</label>
+													<input type="text" name="name" id="f3_1" required="required" data-rule-latin="true" value="" minlength="3">
+												</div>
+											</div>
+											<div class="form_row inside_labels js_inside_labels">
+												<div class="field">
+													<label for="f3_2">Email address <small>(optional)</small></label>
+													<input type="email" name="mail" id="f3_2" data-rule-latin="true" data-rule-checkEmail="true" autocomplete="off" value="">
+												</div>
+											</div>
+											<div class="form_row">
+												<div class="field">
+													<input type="checkbox" name="agreement" id="f3_3" value="" required="required">
+													<label for="f3_3" style="font-size:14px;">I agree to these <a target="_blank" href="/conditions">Terms</a> & <a target="_blank" href="/conditions#policy">Privacy Policy</a></label>
+												</div>
+											</div>
+											<div class="form_row">
+												<div class="field centred">
+													<a class="btn submit disabled" href="#">Send</a>
+												</div>
+											</div>
+											
+										</form>
+									</div>
+									<div class="form_message"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	
+	</body>
+</html>
