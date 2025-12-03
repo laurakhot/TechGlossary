@@ -5,4 +5,4 @@ rank_bm25
 beautifulsoup4
 markdown
 python-frontmatter
-pyterrier[java]
+nltk
