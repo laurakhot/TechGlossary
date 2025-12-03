@@ -1,16 +1,18 @@
-import os
-from flask import Flask, request, render_template
-from rank_bm25 import BM25Okapi
+import os 
 import pandas as pd
 import frontmatter
+import re
 import markdown
 from bs4 import BeautifulSoup
-import re
+import pyterrier as pt
+import html
+from flask import Flask, request, render_template
+import time
 
 # -----------------------------
-# Load glossary from markdown files
+# Load MDN dataset
 # -----------------------------
-def load_glossary_for_pyterrier(glossary_root: str) -> pd.DataFrame:
+def load_md_glossary(glossary_root: str) -> pd.DataFrame:
     rows = []
     for term_folder in os.listdir(glossary_root):
         folder_path = os.path.join(glossary_root, term_folder)
@@ -32,16 +34,63 @@ def load_glossary_for_pyterrier(glossary_root: str) -> pd.DataFrame:
                 except Exception as e:
                     print(f"Error processing {md_file}: {e}")
     
-    return pd.DataFrame(rows, columns=["docno", "text", "html"])
+    return pd.DataFrame(rows, columns=["docno", "text"])
 
 # Load data at startup
 glossary_root = "content/files/en-us/glossary"
-df = load_glossary_for_pyterrier(glossary_root)
+mdn_df = load_md_glossary(glossary_root)
 
-# BM25 initialization
-corpus = df["text"].astype(str).tolist()
-tokenized = [doc.lower().split() for doc in corpus]
-bm25 = BM25Okapi(tokenized)
+# -----------------------------
+# Load GlossaryTech source 
+# -----------------------------
+glossary_items = []
+
+def clean_text_from_cell(cell):
+    text = " ".join(cell.stripped_strings)
+    text = html.unescape(text) # unescape HTML entities
+    text = text.replace('\xa0', ' ') # replace non-breaking space with normal space
+    text = re.sub(r'\s+([?,.!;:])', r'\1', text) # remove space before punctuation: "XML , " -> "XML,"
+    text = re.sub(r'([?,.!;:])\s*', r'\1 ', text) # one space after punctuation
+    text = re.sub(r'\s+\)', r')', text) # spaces around opening parenthesis
+    text = re.sub(r'\(\s+', r'(', text) # spaces around closing parenthesis
+    text = re.sub(r'\s+', ' ', text).strip()
+    return text
+
+def load_html_glossary(filepath):
+    with open(filepath, "r", encoding="utf-8") as f:
+        html_content = f.read()
+    
+    soup = BeautifulSoup(html_content, "html.parser")
+    tables = soup.find_all("table")
+    for table in tables: 
+        rows = table.find_all("tr", attrs={"data-term": True})
+        for row in rows: 
+            cells = row.find_all("td")
+            if len(cells) >= 2:  
+                term = clean_text_from_cell(cells[0])
+                description = clean_text_from_cell(cells[1])
+                glossary_items.append({'docno': term, 'text': description})
+
+
+directory = "glossary_tech"
+for filename in os.listdir(directory):
+    filepath = os.path.join(directory, filename)  
+    if os.path.isfile(filepath): # check not subdirectory 
+        load_html_glossary(filepath)
+        
+html_df = pd.DataFrame(glossary_items)
+
+# Combining the data sources 
+df = pd.concat([html_df, mdn_df], ignore_index=True)
+
+# -----------------------------
+# Initializing BM25 from Index
+# -----------------------------
+
+pt.init()
+index_ref = pt.IndexFactory.of("./glossary_index/data.properties")
+bm25 = pt.BatchRetrieve(index_ref, wmodel="BM25") 
+
 
 # -----------------------------
 # Flask application setup
@@ -54,30 +103,22 @@ app = Flask(__name__)
 @app.route("/", methods=["GET"])
 def search():
     query = request.args.get("q", "")
-
     results = []
+
     if query:
-        tokens = query.lower().split()
-        scores = bm25.get_scores(tokens)
-
-        # Get top 5
-        top = (
-            pd.DataFrame({
-                "docno": df["docno"],
-                "text": df["text"],
-                "score": scores
-            })
-            .sort_values(by="score", ascending=False)
-            .head(5)
-        )
-
-        # Format results for rendering
-        for rank, (_, row) in enumerate(top.iterrows(), start=1):
+        res = bm25.search(query).head(5)
+    
+        for rank, row in enumerate(res.itertuples(), start=1):
+            doc_rows = df.loc[df["docno"] == row.docno]
+            if doc_rows.empty:
+                continue  # skips results not in df
+    
+            doc = doc_rows.iloc[0]
             results.append({
-                "rank": rank,
-                "docno": row["docno"],
-                "snippet": row["text"][:200],
-                "score": round(row["score"], 3)
+                "rank": len(results) + 1,  # rank in the final list
+                "docno": row.docno,
+                "snippet": doc["text"][:200],
+                "score": round(row.score, 3)
             })
 
     return render_template("index.html", results=results, query=query)
