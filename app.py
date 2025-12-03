@@ -12,13 +12,6 @@ import time
 # -----------------------------
 # JDK & PyTerrier Setup
 # -----------------------------
-os.environ["JAVA_HOME"] = os.path.expanduser("~/jdk/jdk-17.0.8+7")
-os.environ["JVM_PATH"] = os.path.join(os.environ["JAVA_HOME"], "lib/server/libjvm.so")
-os.environ["PATH"] = os.environ["JAVA_HOME"] + "/bin:" + os.environ["PATH"]
-
-if not os.path.exists(os.environ["JVM_PATH"]):
-    raise FileNotFoundError(f"libjvm.so not found at {os.environ['JVM_PATH']}")
-
 if not pt.java.started():
     pt.init()
 
