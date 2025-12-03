@@ -140,7 +140,9 @@ def search():
     if query:
         query_tokens = clean_and_tokenize(query)
         doc_scores = bm25.get_scores(query_tokens)
-        top_indices = doc_scores.argsort()[-5:][::-1]
+        pos_scores = [i for i, s in enumerate(doc_scores) if s > 0]
+        pos_scores.sort(key=lambda i: doc_scores[i], reverse=True)
+        top_indices = pos_scores[:5]
 
         for rank, idx in enumerate(top_indices, start=1):
             doc = df.iloc[idx]
