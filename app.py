@@ -2,14 +2,41 @@ import os
 from flask import Flask, request, render_template
 from rank_bm25 import BM25Okapi
 import pandas as pd
+import frontmatter
+import markdown
+from bs4 import BeautifulSoup
+import re
 
 # -----------------------------
-# Load preprocessed glossary data
+# Load glossary from markdown files
 # -----------------------------
+def load_glossary_for_pyterrier(glossary_root: str) -> pd.DataFrame:
+    rows = []
+    for term_folder in os.listdir(glossary_root):
+        folder_path = os.path.join(glossary_root, term_folder)
+        if os.path.isdir(folder_path):
+            md_file = os.path.join(folder_path, "index.md")
+            if os.path.exists(md_file):
+                try:
+                    post = frontmatter.load(md_file)
+                    content_no_placeholders = re.sub(r"\{\{.*?\}\}", "", post.content)
+                    html_content = markdown.markdown(content_no_placeholders)
+                    plain_text = BeautifulSoup(html_content, "html.parser").get_text()
+                    clean_text = re.sub(r"\s+", " ", plain_text).strip()
+                    
+                    rows.append({
+                        "docno": term_folder,
+                        "text": clean_text,
+                        "html": html_content
+                    })
+                except Exception as e:
+                    print(f"Error processing {md_file}: {e}")
+    
+    return pd.DataFrame(rows, columns=["docno", "text", "html"])
 
-# Expecting CSV: content/parsed_glossary.csv
-# Columns: docno, text
-df = pd.read_csv("content/parsed_glossary.csv")
+# Load data at startup
+glossary_root = "content/files/en-us/glossary"
+df = load_glossary_for_pyterrier(glossary_root)
 
 # BM25 initialization
 corpus = df["text"].astype(str).tolist()
@@ -75,4 +102,3 @@ def show_doc(docno):
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 10000))
     app.run(host="0.0.0.0", port=port)
-

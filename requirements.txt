@@ -3,4 +3,5 @@ gunicorn
 pandas
 rank_bm25
 beautifulsoup4
-
+markdown
+python-frontmatter
