@@ -10,8 +10,9 @@ import string
 from rank_bm25 import BM25Okapi
 from nltk.stem import PorterStemmer
 stemmer = PorterStemmer()
+import nltk
+nltk.download('stopwords')  
 from nltk.corpus import stopwords
-nltk.download('stopwords')
 stop_words = set(stopwords.words('english'))
 
 # -----------------------------
