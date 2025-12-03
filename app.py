@@ -88,8 +88,8 @@ html_df = pd.DataFrame(glossary_items)
 
 # Combining the data sources 
 df = pd.concat([html_df, mdn_df], ignore_index=True)
-df['clean_descr'] = df['text'].apply(clean_text)
-df['clean_term'] = df['docno'].astype(str).apply(clean_text) 
+df['clean_descr'] = df['text']
+df['clean_term'] = df['docno'].astype(str)
 df['clean_text'] = df['clean_term'] + " . " + df['clean_descr'] + " . " + df['clean_term']
 
 # -----------------------------
