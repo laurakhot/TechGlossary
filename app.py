@@ -10,6 +10,20 @@ from flask import Flask, request, render_template
 import time
 
 # -----------------------------
+# JDK & PyTerrier Setup
+# -----------------------------
+os.environ["JAVA_HOME"] = os.path.expanduser("~/jdk/jdk-17.0.8+7")
+os.environ["JVM_PATH"] = os.path.join(os.environ["JAVA_HOME"], "lib/server/libjvm.so")
+os.environ["PATH"] = os.environ["JAVA_HOME"] + "/bin:" + os.environ["PATH"]
+
+if not os.path.exists(os.environ["JVM_PATH"]):
+    raise FileNotFoundError(f"libjvm.so not found at {os.environ['JVM_PATH']}")
+
+if not pt.java.started():
+    pt.init()
+
+print("PyTerrier initialized successfully with local JDK.")
+# -----------------------------
 # Load MDN dataset
 # -----------------------------
 def load_md_glossary(glossary_root: str) -> pd.DataFrame:
@@ -86,11 +100,20 @@ df = pd.concat([html_df, mdn_df], ignore_index=True)
 # -----------------------------
 # Initializing BM25 from Index
 # -----------------------------
-
-pt.init()
-index_ref = pt.IndexFactory.of("./glossary_index/data.properties")
-bm25 = pt.BatchRetrieve(index_ref, wmodel="BM25") 
-
+# pt.init()
+# index_ref = pt.IndexFactory.of("./glossary_index/data.properties")
+# bm25 = pt.BatchRetrieve(index_ref, wmodel="BM25") 
+try:
+    index_path = "./glossary_index/data.properties"
+    if not os.path.exists(index_path):
+        raise FileNotFoundError(f"Index not found at {index_path}")
+    
+    index_ref = pt.IndexFactory.of(index_path)
+    bm25 = pt.BatchRetrieve(index_ref, wmodel="BM25")
+    print("BM25 retriever initialized successfully.")
+except Exception as e:
+    print("Error initializing BM25:", e)
+    bm25 = None
 
 # -----------------------------
 # Flask application setup
@@ -105,7 +128,7 @@ def search():
     query = request.args.get("q", "")
     results = []
 
-    if query:
+    if query and bm25:
         res = bm25.search(query).head(5)
     
         for rank, row in enumerate(res.itertuples(), start=1):
