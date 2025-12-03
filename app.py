@@ -52,13 +52,16 @@ mdn_df = load_md_glossary(glossary_root)
 glossary_items = []
 
 def clean_text(cell):
-    text = " ".join(cell.stripped_strings)
-    text = html.unescape(text) # unescape HTML entities
-    text = text.replace('\xa0', ' ') # replace non-breaking space with normal space
-    text = re.sub(r'\s+([?,.!;:])', r'\1', text) # remove space before punctuation: "XML , " -> "XML,"
-    text = re.sub(r'([?,.!;:])\s*', r'\1 ', text) # one space after punctuation
-    text = re.sub(r'\s+\)', r')', text) # spaces around opening parenthesis
-    text = re.sub(r'\(\s+', r'(', text) # spaces around closing parenthesis
+    if hasattr(cell, 'stripped_strings'):
+        text = " ".join(cell.stripped_strings)
+    else:
+        text = str(cell)
+    text = html.unescape(text)
+    text = text.replace('\xa0', ' ')
+    text = re.sub(r'\s+([?,.!;:])', r'\1', text)
+    text = re.sub(r'([?,.!;:])\s*', r'\1 ', text)
+    text = re.sub(r'\s+\)', r')', text)
+    text = re.sub(r'\(\s+', r'(', text)
     text = re.sub(r'\s+', ' ', text).strip()
     return text
 
@@ -88,8 +91,8 @@ html_df = pd.DataFrame(glossary_items)
 
 # Combining the data sources 
 df = pd.concat([html_df, mdn_df], ignore_index=True)
-df['clean_descr'] = df['text']
-df['clean_term'] = df['docno'].astype(str)
+df['clean_descr'] = df['text'].apply(clean_text)
+df['clean_term'] = df['docno'].astype(str).apply(clean_text) 
 df['clean_text'] = df['clean_term'] + " . " + df['clean_descr'] + " . " + df['clean_term']
 
 # -----------------------------
