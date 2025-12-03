@@ -51,7 +51,7 @@ mdn_df = load_md_glossary(glossary_root)
 # -----------------------------
 glossary_items = []
 
-def clean_text_from_cell(cell):
+def clean_text(cell):
     text = " ".join(cell.stripped_strings)
     text = html.unescape(text) # unescape HTML entities
     text = text.replace('\xa0', ' ') # replace non-breaking space with normal space
@@ -73,8 +73,8 @@ def load_html_glossary(filepath):
         for row in rows: 
             cells = row.find_all("td")
             if len(cells) >= 2:  
-                term = clean_text_from_cell(cells[0])
-                description = clean_text_from_cell(cells[1])
+                term = clean_text(cells[0])
+                description = clean_text(cells[1])
                 glossary_items.append({'docno': term, 'text': description})
 
 
